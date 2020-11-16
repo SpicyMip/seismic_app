@@ -8,29 +8,43 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  Widget mainWidget = Item1();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'NavBar Tutorial',
+      title: 'Seismic App',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('NavBar Tutorial'),
+          title: Text('Seismic App'),
         ),
         drawer: Drawer(
           child: ListView(
             padding: EdgeInsets.zero,
             children: <Widget>[
+              // Seccion de lista
               ListTile(
+                leading: Icon(Icons.error),
                 title: Text('Registro de sismos'),
-                onTap: () {},
+                onTap: () {
+                  setState(() {
+                    mainWidget = Item1();
+                  });
+                },
               ),
               ListTile(
                 title: Text('Contactos de emergencia'),
-                onTap: () {},
+                onTap: () {
+                  setState(() {
+                    mainWidget = Item2();
+                  });
+                },
               ),
               ListTile(
                 title: Text('Vias de evacuacion'),
-                onTap: () {},
+                onTap: () {
+                  mainWidget = Item3();
+                },
               )
               // Drawer items go in here
             ],
@@ -45,7 +59,7 @@ class Item1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('Item 1'),
+      body: Text('Registro de sismos'),
     );
   }
 }
@@ -54,7 +68,16 @@ class Item2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('Item 2'),
+      body: Text('Contactos de emergencia'),
+    );
+  }
+}
+
+class Item3 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Text('Contactos de emergencia'),
     );
   }
 }
