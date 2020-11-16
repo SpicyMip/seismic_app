@@ -7,11 +7,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'AppTembloresC', home: paginaInicio('Botones principales'));
+        title: 'Seismic App', home: paginaInicio('Botones principales'));
   }
 
   Widget paginaInicio(String title) {
-    // Texto Registro
+    // Textos
     final tituloRegistro = Container(
       child: Text(
         'Registro de sismos',
