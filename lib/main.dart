@@ -2,40 +2,59 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
-// se encarga de ordenar la estructura del programa
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Seismic App', home: paginaInicio('Botones principales'));
+      title: 'NavBar Tutorial',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('NavBar Tutorial'),
+        ),
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: <Widget>[
+              ListTile(
+                title: Text('Registro de sismos'),
+                onTap: () {},
+              ),
+              ListTile(
+                title: Text('Contactos de emergencia'),
+                onTap: () {},
+              ),
+              ListTile(
+                title: Text('Vias de evacuacion'),
+                onTap: () {},
+              )
+              // Drawer items go in here
+            ],
+          ),
+        ),
+      ),
+    );
   }
+}
 
-  Widget paginaInicio(String title) {
-    // Textos
-    final tituloRegistro = Container(
-      child: Text(
-        'Registro de sismos',
-        style: TextStyle(
-            fontWeight: FontWeight.w400, letterSpacing: 0.5, fontSize: 30),
-      ),
-    );
-
-    final tituloZonas = Container(
-      child: Text(
-        'Zonas de Evacuacion',
-        style: TextStyle(
-            fontWeight: FontWeight.w400, letterSpacing: 0.5, fontSize: 30),
-      ),
-    );
-
-    // Ordena la UI
+class Item1 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(title)),
-      body: Center(
-        child: (Container(
-          child: tituloRegistro,
-        )),
-      ),
+      body: Text('Item 1'),
+    );
+  }
+}
+
+class Item2 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Text('Item 2'),
     );
   }
 }
