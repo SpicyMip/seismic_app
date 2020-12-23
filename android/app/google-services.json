@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "510455748310",
+    "firebase_url": "https://seismicapp-ab75b.firebaseio.com",
+    "project_id": "seismicapp-ab75b",
+    "storage_bucket": "seismicapp-ab75b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:510455748310:android:ae420080ff1d7e36d8db77",
+        "android_client_info": {
+          "package_name": "com.example.seismic_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "510455748310-9s6aqll6alpotb50phg04c363pdbn29r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVymJrL3hCrb2Dhw-aYTl_yWHljznAlUQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "510455748310-9s6aqll6alpotb50phg04c363pdbn29r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
